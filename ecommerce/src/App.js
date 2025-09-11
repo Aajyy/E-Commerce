@@ -1,4 +1,3 @@
-
 import React from "react";
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
@@ -16,28 +15,20 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <Shop/>
-        <ShopCategory/>
-        <Product/>
-        <Cart/>
-        <LoginSignup/>
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="/mens" element={<ShopCategory category="mens" />}/>
-          <Route path="/women" element={<ShopCategory category="women" />}/>
-          <Route path="/kids" element={<ShopCategory category="kids" />}/>
-
+          <Route path="/mens" element={<ShopCategory category="mens" />} />
+          <Route path="/women" element={<ShopCategory category="women" />} />
+          <Route path="/kids" element={<ShopCategory category="kids" />} />
           <Route path="/product" element={<Product />}>
-            <Route path=":productId" element={<Product />}/>
-
+            <Route path=":productId" element={<Product />} />
           </Route>
-          <Route path="/cart" element={<Cart />}/>
-          <Route path="/login" element={<LoginSignup />}/>
-
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginSignup />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;
