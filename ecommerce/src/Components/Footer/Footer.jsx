@@ -7,7 +7,7 @@ import whatsapp_icon from '../Assets/whatsapp_icon.png'
 
 
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className='footer'>
         <div className="footer-logo">
